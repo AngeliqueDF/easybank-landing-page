@@ -1,0 +1,293 @@
+:root {
+	--dark-blue: hsl(233, 26%, 24%);
+	--lime-green: hsl(136, 65%, 51%);
+	--bright-cyan: hsl(192, 70%, 51%);
+	--grayish-blue: hsl(233, 8%, 62%);
+	--light-grayish-blue: hsl(220, 16%, 96%);
+	--very-light-gray: hsl(0, 0%, 98%);
+	--white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+	font-family: "Public Sans";
+	src: url("./../fonts/Public_Sans/PublicSans-Light.ttf");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Public Sans";
+	src: url("./../fonts/Public_Sans/PublicSans-Regular.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Public Sans";
+	src: url("./../fonts/Public_Sans/PublicSans-Bold.ttf");
+	font-weight: 700;
+}
+
+* {
+	font-family: "Public Sans" !important;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	font-size: 18px;
+	color: var(--grayish-blue);
+	background-color: var(--white);
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+/* custom resets */
+button {
+	background-color: unset;
+	border: unset;
+}
+
+/* Utilities */
+.logo {
+	width: 10rem;
+}
+
+button.request-invite-cta {
+	padding: 1rem 3rem;
+	/* padding: 5% 15%; */
+	font-size: 4vw;
+	color: var(--white);
+	border-radius: 3rem;
+	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+}
+
+.service-icon {
+	width: 20%;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+	color: var(--dark-blue);
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+
+/* HEADER */
+
+/* hide header CTA on mobile */
+header .request-invite-cta {
+	display: none;
+}
+
+header {
+	position: relative;
+	background-color: var(--white);
+}
+
+header > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+header > nav {
+	display: none;
+	height: 80%;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1rem;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white);
+	z-index: 3;
+	position: sticky;
+	border-radius: 6px;
+}
+
+header > nav a {
+	margin: 0.5rem auto;
+}
+
+/* Transparent purple overlay */
+header.mobile-menu-open::after {
+	display: none;
+	content: "";
+	background-color: var(--dark-blue);
+	opacity: 0.9;
+	height: 100vh;
+	width: 100%;
+	top: 3rem;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	background-image: url("./../images/bg-intro-mobile.svg");
+	background-repeat: no-repeat;
+	background-position: center -2.5rem;
+}
+
+.hero > div {
+	order: 2;
+
+	padding: 1rem;
+	text-align: center;
+}
+
+.hero > div > * {
+	margin-bottom: 2rem;
+}
+
+.hero > div p {
+	line-height: 7vw;
+	font-size: 4vw;
+}
+
+.hero h1 {
+	font-size: 10vw;
+	line-height: 12vw;
+}
+
+.hero img {
+	order: 1;
+	margin-top: -8.25rem;
+}
+
+.services-introduction {
+	padding: 1rem;
+	text-align: center;
+}
+
+.services-introduction h2 {
+	margin-bottom: 1rem;
+}
+
+.services-introduction p,
+.services article p {
+	font-size: 4.2vw;
+	line-height: 3.8vh;
+	line-height: 7vw;
+}
+
+.services article {
+	text-align: center;
+	margin: 3rem auto;
+	padding: 0 0.35rem;
+}
+
+.services article img {
+	margin-bottom: 1rem;
+}
+
+.latest-articles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.latest-articles h2 {
+	margin-bottom: 2rem;
+}
+
+.latest-articles article {
+	width: 90%;
+	margin: 0 auto;
+	background-color: var(--white);
+}
+
+.latest-articles article img {
+	height: 45%;
+	border-radius: 5px;
+}
+
+.article-meta {
+	padding: 1rem 1rem 3rem;
+}
+
+.article-author,
+.article-title {
+	margin-bottom: 1rem;
+}
+
+.article-author {
+	font-size: 2.9vw;
+}
+
+.article-title {
+	font-size: 4.6vw;
+}
+
+.article-excerpt {
+	font-size: 3.8vw;
+	line-height: 5vw;
+}
+
+footer {
+	background-color: var(--dark-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 30rem;
+	padding: 1rem;
+}
+
+footer .logo {
+	margin: 2rem auto;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	margin: 0rem auto 2.5rem;
+}
+
+.social-links img {
+	width: 1.9rem;
+	margin: 0 0.5rem;
+}
+
+.sitemap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.sitemap li {
+	margin-bottom: 1.4rem;
+}
+
+.sitemap a {
+	color: var(--light-grayish-blue);
+}
+
+footer .request-invite-cta {
+	margin-bottom: 2rem;
+}
+
+.attribution {
+	margin-top: 2rem;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
