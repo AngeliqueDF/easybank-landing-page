@@ -108,18 +108,25 @@ header > div {
 	padding: 1rem;
 }
 
-header > nav {
-	display: none;
-	height: 80%;
-	width: 80%;
+#mobile-menu {
+	height: 33vh;
+	width: 85%;
 	margin: 0 auto;
 	padding: 1rem;
-	flex-direction: column;
-	align-items: center;
+
+	position: absolute;
+	top: 5rem;
+	left: 0rem;
+	right: 0rem;
+
+	border-radius: 6px;
+	color: var(--dark-blue);
+
+	display: grid;
+	place-items: center;
+
 	background-color: var(--white);
 	z-index: 3;
-	position: sticky;
-	border-radius: 6px;
 }
 
 header > nav a {
