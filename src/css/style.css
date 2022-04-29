@@ -218,7 +218,7 @@ header.mobile-menu-open::after {
 }
 
 .latest-articles article {
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
 	background-color: var(--white);
 }
