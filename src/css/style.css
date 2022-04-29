@@ -140,7 +140,7 @@ header > div {
 	background-position: center;
 }
 
-#open-mobile-menu.menu-mobile-open {
+#open-mobile-menu.mobile-menu-open {
 	background-image: url("./../images/icon-close.svg");
 }
 
