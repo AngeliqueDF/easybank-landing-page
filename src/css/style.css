@@ -129,7 +129,7 @@ header > div {
 	z-index: 3;
 }
 
-header > nav a {
+#mobile-menu a {
 	margin: 0.5rem auto;
 }
 
