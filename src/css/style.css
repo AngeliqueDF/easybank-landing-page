@@ -64,10 +64,6 @@ button.request-invite-cta {
 	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
 }
 
-.service-icon {
-	width: 20%;
-}
-
 .hide {
 	display: none !important;
 }
@@ -206,7 +202,7 @@ header.mobile-menu-open::after {
 }
 
 .services-introduction p,
-.services article p {
+.services p {
 	font-size: 4.2vw;
 	line-height: 3.8vh;
 	line-height: 7vw;
@@ -218,7 +214,8 @@ header.mobile-menu-open::after {
 	padding: 0 0.35rem;
 }
 
-.services article img {
+.service-icon {
+	width: 20%;
 	margin-bottom: 1rem;
 }
 
