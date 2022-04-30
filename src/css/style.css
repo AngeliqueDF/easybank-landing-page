@@ -273,6 +273,11 @@ footer {
 	padding: 1rem;
 }
 
+.left-information {
+	display: grid;
+	place-items: center;
+}
+
 footer .logo {
 	margin: 2rem auto;
 }
