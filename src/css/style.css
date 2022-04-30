@@ -316,6 +316,8 @@ footer .request-invite-cta {
 	margin-top: 2rem;
 	font-size: 11px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
@@ -436,8 +438,12 @@ footer .request-invite-cta {
 	.latest-articles {
 		display: unset;
 	}
-	.latest-articles h2 + div {
+	.latest-articles h2 {
 		padding: 1rem 8rem;
+		margin-top: 3rem;
+	}
+	.latest-articles h2 + div {
+		padding: 1rem 8rem 3rem;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -461,5 +467,40 @@ footer .request-invite-cta {
 	.article-excerpt {
 		font-size: 1vw;
 		line-height: 2vh;
+	}
+	footer {
+		flex-direction: row;
+		align-items: center;
+		min-height: unset;
+		padding: 2rem 8rem;
+		color: var(--grayish-blue);
+	}
+	footer .logo {
+		margin-bottom: 3.5rem;
+	}
+	.left-information {
+		margin-right: 6rem;
+	}
+	.social-links img {
+		width: 1.35rem;
+	}
+	.sitemap {
+		display: unset;
+		margin-bottom: unset;
+		columns: 2;
+		column-gap: 4rem;
+		margin-right: auto;
+	}
+	.attribution {
+		margin: unset;
+		/* display: flex;
+		flex-direction: column; */
+		align-items: flex-end;
+	}
+	.attribution .request-invite-cta {
+		max-width: 80%;
+	}
+	.attribution small {
+		font-size: 1vw;
 	}
 }
