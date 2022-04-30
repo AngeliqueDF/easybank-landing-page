@@ -173,7 +173,8 @@ header.mobile-menu-open::after {
 	text-align: center;
 }
 
-.hero > div > * {
+.hero > div > h1,
+.hero > div > p {
 	margin-bottom: 2rem;
 }
 
