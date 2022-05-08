@@ -180,7 +180,7 @@ header.mobile-menu-open::after {
 
 .hero > div > h1,
 .hero > div > p {
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .hero > div p {
@@ -195,7 +195,7 @@ header.mobile-menu-open::after {
 
 .hero img {
 	order: 1;
-	margin-top: -8.25rem;
+	margin-block-start: -8.25rem;
 }
 
 /* END HERO SECTION */
@@ -208,7 +208,7 @@ header.mobile-menu-open::after {
 }
 
 .services-introduction h2 {
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 .services-introduction p,
@@ -226,7 +226,7 @@ header.mobile-menu-open::after {
 
 .service-icon {
 	width: 20%;
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 /* END SERVICES SECTION */
@@ -240,7 +240,7 @@ header.mobile-menu-open::after {
 }
 
 .latest-articles h2 {
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .latest-articles article {
@@ -260,7 +260,7 @@ header.mobile-menu-open::after {
 
 .article-author,
 .article-title {
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 .article-author {
@@ -314,11 +314,11 @@ footer .logo {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .sitemap li {
-	margin-bottom: 1.4rem;
+	margin-block-end: 1.4rem;
 }
 
 .sitemap a {
@@ -326,11 +326,11 @@ footer .logo {
 }
 
 footer .request-invite-cta {
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .attribution {
-	margin-top: 2rem;
+	margin-block-start: 2rem;
 	font-size: 11px;
 	text-align: center;
 	display: flex;
@@ -347,7 +347,7 @@ footer .request-invite-cta {
 		padding: 1rem 2rem;
 	}
 	main {
-		max-width: 100%;
+		max-inline-size: 100%;
 		overflow: hidden;
 		position: relative;
 	}
@@ -393,7 +393,7 @@ footer .request-invite-cta {
 		background-position: 68vh -18vw;
 		display: flex;
 		flex-direction: row;
-		max-width: 100%;
+		max-inline-size: 100%;
 
 		/* prevent scrolling caused by the mockup image overflowing the screen */
 		overflow: hidden !important;
@@ -444,18 +444,18 @@ footer .request-invite-cta {
 		font-size: 1.45vw;
 		line-height: 3vw;
 		width: 60ch;
-		margin-bottom: 4rem;
+		margin-block-end: 4rem;
 	}
 	.service-icon {
 		width: 30%;
-		margin-bottom: 2rem;
+		margin-block-end: 2rem;
 	}
 	.services article {
 		width: 21%;
 		margin: unset;
 	}
 	.services h3 {
-		margin-bottom: 1.4rem;
+		margin-block-end: 1.4rem;
 		font-size: 1.7rem;
 	}
 	.services p {
@@ -475,7 +475,7 @@ footer .request-invite-cta {
 	}
 	.latest-articles h2 {
 		padding: 1rem 8rem;
-		margin-top: 3rem;
+		margin-block-start: 3rem;
 	}
 	.latest-articles h2 + div {
 		padding: 1rem 8rem 3rem;
@@ -514,27 +514,27 @@ footer .request-invite-cta {
 		color: var(--grayish-blue);
 	}
 	footer .logo {
-		margin-bottom: 3.5rem;
+		margin-block-end: 3.5rem;
 	}
 	.left-information {
-		margin-right: 6rem;
+		margin-inline-end: 6rem;
 	}
 	.social-links img {
 		width: 1.35rem;
 	}
 	.sitemap {
 		display: unset;
-		margin-bottom: unset;
+		margin-block-end: unset;
 		columns: 2;
 		column-gap: 4rem;
-		margin-right: auto;
+		margin-inline-end: auto;
 	}
 	.attribution {
 		margin: unset;
 		align-items: flex-end;
 	}
 	.attribution .request-invite-cta {
-		max-width: 80%;
+		max-inline-size: 80%;
 	}
 	.attribution small {
 		font-size: 1vw;
