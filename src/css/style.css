@@ -168,6 +168,7 @@ header.mobile-menu-open::after {
 	background-image: url("./../images/bg-intro-mobile.svg");
 	background-repeat: no-repeat;
 	background-position: center -2.5rem;
+	background-size: 100%;
 }
 
 .hero > div {
