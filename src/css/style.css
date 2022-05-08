@@ -28,6 +28,7 @@
 	font-family: "Public Sans" !important;
 }
 
+/* make images responsive */
 img {
 	width: 100%;
 	height: auto;
@@ -39,12 +40,12 @@ body {
 	background-color: var(--white);
 }
 
+/* custom resets */
 a {
 	text-decoration: none;
 	color: unset;
 }
 
-/* custom resets */
 button {
 	background-color: unset;
 	border: unset;
@@ -57,13 +58,13 @@ button {
 
 button.request-invite-cta {
 	padding: 1rem 3rem;
-	/* padding: 5% 15%; */
 	font-size: 4vw;
 	color: var(--white);
 	border-radius: 3rem;
 	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
 }
 
+/* hides the nav by default, will be overriden on desktop */
 .hide {
 	display: none !important;
 }
@@ -97,6 +98,7 @@ header {
 	background-color: var(--white);
 }
 
+/* position header element on mobile, when the menu is closed */
 header > div {
 	display: flex;
 	justify-content: space-between;
@@ -140,7 +142,7 @@ header > div {
 	background-image: url("./../images/icon-close.svg");
 }
 
-/* Transparent purple overlay */
+/* Transparent purple overlay, appears when the header gets a class of ".mobile-menu-open" */
 header.mobile-menu-open::after {
 	content: "";
 	background: rgb(0, 36, 1);
@@ -157,6 +159,8 @@ header.mobile-menu-open::after {
 	position: absolute;
 	z-index: 1;
 }
+
+/* HERO SECTION */
 
 .hero {
 	display: flex;
@@ -194,6 +198,10 @@ header.mobile-menu-open::after {
 	margin-top: -8.25rem;
 }
 
+/* END HERO SECTION */
+
+/* SERVICES SECTION */
+
 .services-introduction {
 	padding: 1rem;
 	text-align: center;
@@ -220,6 +228,10 @@ header.mobile-menu-open::after {
 	width: 20%;
 	margin-bottom: 1rem;
 }
+
+/* END SERVICES SECTION */
+
+/* LATEST ARTICLES SECTION */
 
 .latest-articles {
 	display: flex;
@@ -263,6 +275,10 @@ header.mobile-menu-open::after {
 	font-size: 3.8vw;
 	line-height: 5vw;
 }
+
+/* END LATEST ARTICLES SECTION */
+
+/* FOOTER */
 
 footer {
 	background-color: var(--dark-blue);
@@ -324,6 +340,8 @@ footer .request-invite-cta {
 	color: hsl(228, 45%, 44%);
 }
 
+/* END FOOTER */
+
 @media screen and (min-width: 1440px) {
 	button.request-invite-cta {
 		padding: 1rem 2rem;
@@ -333,9 +351,12 @@ footer .request-invite-cta {
 		overflow: hidden;
 		position: relative;
 	}
+
+	/* Hide the hamburger menu */
 	#open-mobile-menu {
 		display: none;
 	}
+
 	header {
 		display: flex;
 		align-items: center;
@@ -346,10 +367,13 @@ footer .request-invite-cta {
 		position: sticky;
 		z-index: 4;
 	}
+
 	#mobile-menu {
-		/* overriding .hide rules */
+		/* override .hide rules */
 		display: flex !important;
 		justify-content: space-around;
+
+		/* reposition the nav in the header  */
 		position: unset;
 		padding: unset;
 		height: unset;
@@ -359,6 +383,8 @@ footer .request-invite-cta {
 		color: var(--grayish-blue);
 		width: 30%;
 	}
+
+	/* make the CTA visible */
 	header .request-invite-cta {
 		display: unset;
 	}
@@ -368,6 +394,8 @@ footer .request-invite-cta {
 		display: flex;
 		flex-direction: row;
 		max-width: 100%;
+
+		/* prevent scrolling caused by the mockup image overflowing the screen */
 		overflow: hidden !important;
 		overflow: -moz-hidden-unscrollable !important;
 	}
@@ -395,6 +423,8 @@ footer .request-invite-cta {
 	button.request-invite-cta {
 		font-size: 1.2vw;
 	}
+
+	/* SERVICES SECTION */
 	.services,
 	.services article,
 	.services-introduction {
@@ -436,7 +466,11 @@ footer .request-invite-cta {
 		display: flex;
 		justify-content: space-between;
 	}
+	/* END SERVICES SECTION */
+
+	/* LATEST ARTICLES SECTION */
 	.latest-articles {
+		/* restoring the default display value */
 		display: unset;
 	}
 	.latest-articles h2 {
@@ -469,6 +503,9 @@ footer .request-invite-cta {
 		font-size: 1vw;
 		line-height: 2vh;
 	}
+	/* END LATEST ARTICLES SECTION */
+
+	/* FOOTER SECTION */
 	footer {
 		flex-direction: row;
 		align-items: center;
@@ -494,8 +531,6 @@ footer .request-invite-cta {
 	}
 	.attribution {
 		margin: unset;
-		/* display: flex;
-		flex-direction: column; */
 		align-items: flex-end;
 	}
 	.attribution .request-invite-cta {
@@ -504,4 +539,5 @@ footer .request-invite-cta {
 	.attribution small {
 		font-size: 1vw;
 	}
+	/* END FOOTER SECTION */
 }
