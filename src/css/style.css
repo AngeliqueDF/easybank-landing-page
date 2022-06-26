@@ -28,6 +28,7 @@
 	font-family: "Public Sans" !important;
 }
 
+/* make images responsive */
 img {
 	width: 100%;
 	height: auto;
@@ -39,12 +40,12 @@ body {
 	background-color: var(--white);
 }
 
+/* custom resets */
 a {
 	text-decoration: none;
 	color: unset;
 }
 
-/* custom resets */
 button {
 	background-color: unset;
 	border: unset;
@@ -57,17 +58,13 @@ button {
 
 button.request-invite-cta {
 	padding: 1rem 3rem;
-	/* padding: 5% 15%; */
 	font-size: 4vw;
 	color: var(--white);
 	border-radius: 3rem;
 	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
 }
 
-.service-icon {
-	width: 20%;
-}
-
+/* hides the nav by default, will be overriden on desktop */
 .hide {
 	display: none !important;
 }
@@ -101,6 +98,7 @@ header {
 	background-color: var(--white);
 }
 
+/* position header element on mobile, when the menu is closed */
 header > div {
 	display: flex;
 	justify-content: space-between;
@@ -144,7 +142,7 @@ header > div {
 	background-image: url("./../images/icon-close.svg");
 }
 
-/* Transparent purple overlay */
+/* Transparent purple overlay, appears when the header gets a class of ".mobile-menu-open" */
 header.mobile-menu-open::after {
 	content: "";
 	background: rgb(0, 36, 1);
@@ -162,12 +160,15 @@ header.mobile-menu-open::after {
 	z-index: 1;
 }
 
+/* HERO SECTION */
+
 .hero {
 	display: flex;
 	flex-direction: column;
 	background-image: url("./../images/bg-intro-mobile.svg");
 	background-repeat: no-repeat;
 	background-position: center -2.5rem;
+	background-size: 100%;
 }
 
 .hero > div {
@@ -177,8 +178,9 @@ header.mobile-menu-open::after {
 	text-align: center;
 }
 
-.hero > div > * {
-	margin-bottom: 2rem;
+.hero > div > h1,
+.hero > div > p {
+	margin-block-end: 2rem;
 }
 
 .hero > div p {
@@ -193,8 +195,12 @@ header.mobile-menu-open::after {
 
 .hero img {
 	order: 1;
-	margin-top: -8.25rem;
+	margin-block-start: -8.25rem;
 }
+
+/* END HERO SECTION */
+
+/* SERVICES SECTION */
 
 .services-introduction {
 	padding: 1rem;
@@ -202,11 +208,11 @@ header.mobile-menu-open::after {
 }
 
 .services-introduction h2 {
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 .services-introduction p,
-.services article p {
+.services p {
 	font-size: 4.2vw;
 	line-height: 3.8vh;
 	line-height: 7vw;
@@ -218,9 +224,14 @@ header.mobile-menu-open::after {
 	padding: 0 0.35rem;
 }
 
-.services article img {
-	margin-bottom: 1rem;
+.service-icon {
+	width: 20%;
+	margin-block-end: 1rem;
 }
+
+/* END SERVICES SECTION */
+
+/* LATEST ARTICLES SECTION */
 
 .latest-articles {
 	display: flex;
@@ -229,7 +240,7 @@ header.mobile-menu-open::after {
 }
 
 .latest-articles h2 {
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .latest-articles article {
@@ -249,7 +260,7 @@ header.mobile-menu-open::after {
 
 .article-author,
 .article-title {
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 .article-author {
@@ -265,6 +276,10 @@ header.mobile-menu-open::after {
 	line-height: 5vw;
 }
 
+/* END LATEST ARTICLES SECTION */
+
+/* FOOTER */
+
 footer {
 	background-color: var(--dark-blue);
 	display: flex;
@@ -273,6 +288,11 @@ footer {
 	align-items: center;
 	min-height: 30rem;
 	padding: 1rem;
+}
+
+.left-information {
+	display: grid;
+	place-items: center;
 }
 
 footer .logo {
@@ -294,26 +314,230 @@ footer .logo {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .sitemap li {
-	margin-bottom: 1.4rem;
+	margin-block-end: 1.4rem;
 }
 
 .sitemap a {
-	color: var(--light-grayish-blue);
+	color: var(--grayish-blue);
 }
 
 footer .request-invite-cta {
-	margin-bottom: 2rem;
+	margin-block-end: 2rem;
 }
 
 .attribution {
-	margin-top: 2rem;
+	margin-block-start: 2rem;
 	font-size: 11px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+/* END FOOTER */
+
+@media screen and (min-width: 1440px) {
+	button.request-invite-cta {
+		padding: 1rem 2rem;
+	}
+	main {
+		max-inline-size: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+
+	/* Hide the hamburger menu */
+	#open-mobile-menu {
+		display: none;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		padding: 1rem 8rem;
+		position: unset;
+		background-color: var(--white);
+		justify-content: space-between;
+		position: sticky;
+		z-index: 4;
+	}
+
+	#mobile-menu {
+		/* override .hide rules */
+		display: flex !important;
+		justify-content: space-around;
+
+		/* reposition the nav in the header  */
+		position: unset;
+		padding: unset;
+		height: unset;
+		border-radius: unset;
+		margin: unset;
+
+		color: var(--grayish-blue);
+		width: 30%;
+	}
+
+	/* make the CTA visible */
+	header .request-invite-cta {
+		display: unset;
+	}
+	.hero {
+		background-image: url("./../images/bg-intro-desktop.svg");
+		background-position: 68vh -18vw;
+		display: flex;
+		flex-direction: row;
+		max-inline-size: 100%;
+
+		/* prevent scrolling caused by the mockup image overflowing the screen */
+		overflow: hidden !important;
+		overflow: -moz-hidden-unscrollable !important;
+	}
+	.hero > div {
+		padding: 9rem 0 8rem 6rem;
+		text-align: unset;
+		width: 38%;
+	}
+	.hero > div h1 {
+		font-size: 4vw;
+		line-height: 5vw;
+	}
+	.hero > div p {
+		font-size: 1.5vw;
+		line-height: 2.2vw;
+	}
+	.hero img {
+		margin: unset;
+		position: absolute;
+		width: 50vw;
+		top: -3.3%;
+		right: -8.8rem;
+		z-index: 3;
+	}
+	button.request-invite-cta {
+		font-size: 1.2vw;
+	}
+
+	/* SERVICES SECTION */
+	.services,
+	.services article,
+	.services-introduction {
+		text-align: unset;
+	}
+	.services {
+		padding: 6rem 8rem;
+		background-color: var(--light-grayish-blue);
+	}
+	.services-introduction {
+		padding: unset;
+	}
+	.services-introduction h2 {
+		font-size: 3vw;
+	}
+	.services .services-introduction > p {
+		font-size: 1.45vw;
+		line-height: 3vw;
+		width: 60ch;
+		margin-block-end: 4rem;
+	}
+	.service-icon {
+		width: 30%;
+		margin-block-end: 2rem;
+	}
+	.services article {
+		width: 21%;
+		margin: unset;
+	}
+	.services h3 {
+		margin-block-end: 1.4rem;
+		font-size: 1.7rem;
+	}
+	.services p {
+		font-size: 1.05vw;
+		line-height: 1.5vw;
+	}
+	.services-introduction + div {
+		display: flex;
+		justify-content: space-between;
+	}
+	/* END SERVICES SECTION */
+
+	/* LATEST ARTICLES SECTION */
+	.latest-articles {
+		/* restoring the default display value */
+		display: unset;
+	}
+	.latest-articles h2 {
+		padding: 1rem 8rem;
+		margin-block-start: 3rem;
+	}
+	.latest-articles h2 + div {
+		padding: 1rem 8rem 3rem;
+		display: flex;
+		justify-content: space-between;
+	}
+	.latest-articles article {
+		width: 22.4%;
+		margin: unset;
+	}
+	.latest-articles article img {
+		height: 20vh;
+	}
+	.article-meta {
+		padding: 1rem 0.9rem 3rem;
+	}
+	.article-author {
+		font-size: 1.1vw;
+	}
+	.article-title {
+		font-size: 1.2vw;
+		line-height: 2.4vh;
+	}
+	.article-excerpt {
+		font-size: 1vw;
+		line-height: 2vh;
+	}
+	/* END LATEST ARTICLES SECTION */
+
+	/* FOOTER SECTION */
+	footer {
+		flex-direction: row;
+		align-items: center;
+		min-height: unset;
+		padding: 2rem 8rem;
+		color: var(--grayish-blue);
+	}
+	footer .logo {
+		margin-block-end: 3.5rem;
+	}
+	.left-information {
+		margin-inline-end: 6rem;
+	}
+	.social-links img {
+		width: 1.35rem;
+	}
+	.sitemap {
+		display: unset;
+		margin-block-end: unset;
+		columns: 2;
+		column-gap: 4rem;
+		margin-inline-end: auto;
+	}
+	.attribution {
+		margin: unset;
+		align-items: flex-end;
+	}
+	.attribution .request-invite-cta {
+		max-inline-size: 80%;
+	}
+	.attribution small {
+		font-size: 1vw;
+	}
+	/* END FOOTER SECTION */
 }
