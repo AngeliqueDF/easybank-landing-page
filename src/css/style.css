@@ -604,3 +604,11 @@ footer .right-information {
 }
 /* END HOVER COMPATIBLE DEVICES */
 
+/* TOUCH SCREENS */
+@media (hover: none) {
+	.request-invite-cta:active {
+		cursor: pointer;
+	}
+
+}
+/* END TOUCH SCREENS */
