@@ -24,8 +24,9 @@
 	font-weight: 700;
 }
 
-* {
-	font-family: "Public Sans" !important;
+html {
+	font-family: "Public Sans", sans-serif;
+	font-size: 18px;
 }
 
 /* make images responsive */
@@ -35,7 +36,6 @@ img {
 }
 
 body {
-	font-size: 18px;
 	color: var(--grayish-blue);
 	background-color: var(--white);
 }
