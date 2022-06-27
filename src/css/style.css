@@ -329,12 +329,20 @@ footer .request-invite-cta {
 	margin-block-end: 2rem;
 }
 
-.attribution {
-	margin-block-start: 2rem;
-	font-size: 11px;
-	text-align: center;
+footer .right-information {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	font-size: 11px;
+	position: fixed;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
@@ -384,9 +392,17 @@ footer .request-invite-cta {
 		width: 30%;
 	}
 
+	header {
+		padding: 1rem 6rem;
+	}
+
 	/* make the CTA visible */
 	header .request-invite-cta {
 		display: unset;
+	}
+
+	header > div {
+		padding: unset;
 	}
 	.hero {
 		background-image: url("./../images/bg-intro-desktop.svg");
@@ -422,6 +438,9 @@ footer .request-invite-cta {
 	}
 	button.request-invite-cta {
 		font-size: 1.2vw;
+	}
+	header button.request-invite-cta {
+		margin-inline-end: 2rem;
 	}
 
 	/* SERVICES SECTION */
@@ -528,6 +547,9 @@ footer .request-invite-cta {
 		columns: 2;
 		column-gap: 4rem;
 		margin-inline-end: auto;
+	}
+	footer .right-information {
+		align-items: flex-end;
 	}
 	.attribution {
 		margin: unset;
