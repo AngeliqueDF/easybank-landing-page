@@ -590,6 +590,17 @@ footer .right-information {
 		);
 	}
 
+	.article-title:hover,
+	.sitemap a:hover {
+		color: var(--lime-green);
+		cursor: pointer;
+	}
+
+	.social-links a:hover {
+		color: var(--lime-green);
+		cursor: pointer;
+		filter: brightness(0.5) sepia(1) hue-rotate(116deg) saturate(5);
+	}
 }
 /* END HOVER COMPATIBLE DEVICES */
 
