@@ -24,8 +24,9 @@
 	font-weight: 700;
 }
 
-* {
-	font-family: "Public Sans" !important;
+html {
+	font-family: "Public Sans", sans-serif;
+	font-size: 18px;
 }
 
 /* make images responsive */
@@ -35,9 +36,8 @@ img {
 }
 
 body {
-	font-size: 18px;
 	color: var(--grayish-blue);
-	background-color: var(--white);
+	background-color: var(--very-light-gray);
 }
 
 /* custom resets */
@@ -56,7 +56,7 @@ button {
 	width: 10rem;
 }
 
-button.request-invite-cta {
+.request-invite-cta {
 	padding: 1rem 3rem;
 	font-size: 4vw;
 	color: var(--white);
@@ -127,7 +127,7 @@ header > div {
 	z-index: 3;
 }
 
-#mobile-menu a {
+nav a {
 	margin: 0.5rem auto;
 }
 
@@ -169,6 +169,7 @@ header.mobile-menu-open::after {
 	background-repeat: no-repeat;
 	background-position: center -2.5rem;
 	background-size: 100%;
+	background-color: var(--very-light-gray);
 }
 
 .hero > div {
@@ -351,7 +352,7 @@ footer .right-information {
 /* END FOOTER */
 
 @media screen and (min-width: 1440px) {
-	button.request-invite-cta {
+	.request-invite-cta {
 		padding: 1rem 2rem;
 	}
 	main {
@@ -436,11 +437,8 @@ footer .right-information {
 		right: -8.8rem;
 		z-index: 3;
 	}
-	button.request-invite-cta {
+	.request-invite-cta {
 		font-size: 1.2vw;
-	}
-	header button.request-invite-cta {
-		margin-inline-end: 2rem;
 	}
 
 	/* SERVICES SECTION */
