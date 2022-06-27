@@ -394,7 +394,8 @@ footer .right-information {
 	}
 
 	header {
-		padding: 1rem 6rem;
+		padding: 0 6rem;
+	}
 	}
 
 	/* make the CTA visible */
