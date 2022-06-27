@@ -610,5 +610,17 @@ footer .right-information {
 		cursor: pointer;
 	}
 
+	nav a:active {
+		cursor: pointer;
+		border-bottom: 10px solid;
+		border-image-slice: 1;
+		border-bottom-width: 5px;
+		border-image-source: linear-gradient(
+			to left,
+			var(--bright-cyan),
+			var(--lime-green)
+		);
+	}
+
 }
 /* END TOUCH SCREENS */
