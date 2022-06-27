@@ -622,5 +622,16 @@ footer .right-information {
 		);
 	}
 
+	.article-title:active,
+	.sitemap a:active {
+		color: var(--lime-green);
+		cursor: pointer;
+	}
+
+	.social-links a:active {
+		color: var(--lime-green);
+		cursor: pointer;
+		filter: brightness(0.5) sepia(1) hue-rotate(116deg) saturate(5);
+	}
 }
 /* END TOUCH SCREENS */
