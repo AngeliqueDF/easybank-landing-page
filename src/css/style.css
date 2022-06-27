@@ -37,7 +37,7 @@ img {
 
 body {
 	color: var(--grayish-blue);
-	background-color: var(--white);
+	background-color: var(--very-light-gray);
 }
 
 /* custom resets */
@@ -169,6 +169,7 @@ header.mobile-menu-open::after {
 	background-repeat: no-repeat;
 	background-position: center -2.5rem;
 	background-size: 100%;
+	background-color: var(--very-light-gray);
 }
 
 .hero > div {
