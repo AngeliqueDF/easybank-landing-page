@@ -392,9 +392,17 @@ footer .right-information {
 		width: 30%;
 	}
 
+	header {
+		padding: 1rem 6rem;
+	}
+
 	/* make the CTA visible */
 	header .request-invite-cta {
 		display: unset;
+	}
+
+	header > div {
+		padding: unset;
 	}
 	.hero {
 		background-image: url("./../images/bg-intro-desktop.svg");
