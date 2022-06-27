@@ -569,3 +569,13 @@ footer .right-information {
 	}
 	/* END FOOTER SECTION */
 }
+
+/* HOVER COMPATIBLE DEVICES */
+@media (any-hover: hover) {
+	.request-invite-cta:hover {
+		cursor: pointer;
+	}
+
+}
+/* END HOVER COMPATIBLE DEVICES */
+
