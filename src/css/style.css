@@ -548,6 +548,9 @@ footer .right-information {
 		column-gap: 4rem;
 		margin-inline-end: auto;
 	}
+	footer .right-information {
+		align-items: flex-end;
+	}
 	.attribution {
 		margin: unset;
 		align-items: flex-end;
