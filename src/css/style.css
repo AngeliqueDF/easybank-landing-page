@@ -439,9 +439,6 @@ footer .right-information {
 	.request-invite-cta {
 		font-size: 1.2vw;
 	}
-	header button.request-invite-cta {
-		margin-inline-end: 2rem;
-	}
 
 	/* SERVICES SECTION */
 	.services,
