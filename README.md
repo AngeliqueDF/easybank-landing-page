@@ -41,62 +41,11 @@ _A landing page for a digital banking service._
 
 <br />
 
-## Description
-
-So you had an idea and developed the next world's industry-changing application. You decided to open-source it because you're way cool. Now you need to educate people about your project and need some docs to get started. You got it. :alien:
-
-### How I built this project
-
-1. Frontend
-   1. Start by structuring the page with semantic and accessible HTML. Check W3C compliance with the website or extension.
-   2. Style the page with a mobile-first approach.
-   3. Add functionality with JavaScript.
-2. Backend
-   1. Middlewares (security, error handlers, utility)
-   2. Write Routes
-   3. (Write tests if they weren't already written)
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-	color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-	console.log("🎉");
-};
-```
-
-<br />
-
-### Recommended technologies and tools
-
-<br />
-
 ## Status
 
 ### Planned changes
 
 - [ ] Refactor the JavaScript code.
-
-## Sources
-
-## Useful references
-
-1. Resource
-2. Resource
-3. Resource
 
 ## Author
 
