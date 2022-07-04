@@ -102,8 +102,8 @@ header > div {
 	padding: 1rem;
 }
 
-#mobile-menu {
-	height: 33vh;
+nav {
+	min-height: 33vh;
 	width: 85%;
 	margin: 0 auto;
 	padding: 1rem;
