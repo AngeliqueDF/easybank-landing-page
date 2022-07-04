@@ -124,7 +124,8 @@ nav {
 }
 
 nav a {
-	margin: 0.5rem auto;
+	display: inline-block;
+	padding: 1rem;
 }
 
 #open-mobile-menu {
