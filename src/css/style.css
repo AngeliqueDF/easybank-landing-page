@@ -379,24 +379,21 @@ footer .right-information {
 		z-index: 4;
 	}
 
-	#mobile-menu {
+	header {
 		/* override .hide rules */
-		display: flex !important;
-		justify-content: space-around;
-
-		/* reposition the nav in the header  */
-		position: unset;
-		padding: unset;
+		min-height: unset;
 		height: unset;
-		border-radius: unset;
-		margin: unset;
-
-		color: var(--grayish-blue);
-		width: 30%;
+		padding: 0 6rem;
 	}
 
-	header {
-		padding: 0 6rem;
+	#mobile-menu {
+		display: flex;
+		position: unset;
+		min-height: unset;
+		width: unset;
+		margin: unset;
+		padding: unset;
+		border-radius: unset;
 	}
 
 	nav a {
