@@ -65,11 +65,6 @@ button {
 	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
 }
 
-/* hides the nav by default, will be overriden on desktop */
-.hide {
-	display: none !important;
-}
-
 /* Typography */
 h1,
 h2,
@@ -107,8 +102,8 @@ header > div {
 	padding: 1rem;
 }
 
-#mobile-menu {
-	height: 33vh;
+nav {
+	min-height: 33vh;
 	width: 85%;
 	margin: 0 auto;
 	padding: 1rem;
@@ -129,7 +124,8 @@ header > div {
 }
 
 nav a {
-	margin: 0.5rem auto;
+	display: inline-block;
+	padding: 1rem;
 }
 
 #open-mobile-menu {
@@ -352,6 +348,11 @@ footer .right-information {
 
 /* END FOOTER */
 
+/* hides the nav by default, will be overriden on desktop */
+.hide {
+	display: none;
+}
+
 @media screen and (min-width: 1440px) {
 	.request-invite-cta {
 		padding: 1rem 2rem;
@@ -378,32 +379,28 @@ footer .right-information {
 		z-index: 4;
 	}
 
-	#mobile-menu {
-		/* override .hide rules */
-		display: flex !important;
-		justify-content: space-around;
-
-		/* reposition the nav in the header  */
-		position: unset;
-		padding: unset;
-		height: unset;
-		border-radius: unset;
-		margin: unset;
-
-		color: var(--grayish-blue);
-		width: 30%;
-	}
-
 	header {
+		/* override .hide rules */
+		min-height: unset;
+		height: unset;
 		padding: 0 6rem;
 	}
 
+	#mobile-menu {
+		display: flex;
+		position: unset;
+		min-height: unset;
+		width: unset;
+		margin: unset;
+		padding: unset;
+		border-radius: unset;
+	}
+
 	nav a {
-		padding: 2rem 0;
-		margin: 0 1rem;
-		border-bottom: 10px solid transparent;
-		border-image-slice: 1;
-		border-bottom-width: 5px;
+		font-size: 0.9rem;
+		display: inline-block;
+		padding: 2rem 1rem;
+		color: var(--grayish-blue);
 	}
 
 	/* make the CTA visible */
@@ -579,16 +576,26 @@ footer .right-information {
 		cursor: pointer;
 	}
 
+	nav a {
+		transition: 0.2s;
+		background-position: 0% 100%;
+		background-size: 0% 6%;
+	}
+
 	nav a:hover {
-		cursor: pointer;
-		border-bottom: 10px solid;
-		border-image-slice: 1;
-		border-bottom-width: 5px;
-		border-image-source: linear-gradient(
-			to left,
-			var(--bright-cyan),
-			var(--lime-green)
+		background-image: linear-gradient(#1095c1, #1095c1);
+		background-image: linear-gradient(
+			to right,
+			var(--lime-green),
+			var(--bright-cyan)
 		);
+		background-repeat: no-repeat;
+		color: var(--dark-blue);
+		background-size: 100% 6%;
+	}
+
+	nav a:active {
+		background-size: 0%;
 	}
 
 	.article-title:hover,
@@ -611,16 +618,14 @@ footer .right-information {
 		cursor: pointer;
 	}
 
+	nav a {
+		border: 2px solid transparent;
+	}
+
+	#open-mobile-menu:active,
 	nav a:active {
-		cursor: pointer;
-		border-bottom: 10px solid;
-		border-image-slice: 1;
-		border-bottom-width: 5px;
-		border-image-source: linear-gradient(
-			to left,
-			var(--bright-cyan),
-			var(--lime-green)
-		);
+		color: var(--dark-blue);
+		border: 2px solid var(--lime-green);
 	}
 
 	.article-title:active,
